@@ -3,9 +3,7 @@ The code consists of several functions, with only two main blocks. Before the tr
 
 - Preprocessing Methodology
 The preprocessing pipeline is as follows: the two different languages are combined into a single list, separated by ‘special tokens’ that denote the start, break and end of a sentence. 
-
 For example: for input language a b c and output language x y z, we convert it to <spl> a b c <spl> x y z <spl>
-
 This corpus is tokenized and padded. The corpus is then separated into train_in, train_out, val_in and val_out; out of which train_in and val_in are robbed of their last element and the train_out and val_out are moved forward by one digit and one-hot vectorized. This is in order to train the model to predict the next token in the series. These datasets are compiled together into a single tensor dataset and separated into batches. 
 
 - Model Methodology
