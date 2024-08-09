@@ -10,3 +10,7 @@ This corpus is tokenized and padded. The corpus is then separated into train_in,
 
 # Model Methodology
 The model chosen for this project is a transformer decoder, whose function is to take in a series of tokens and predict the next token. Towards this end, we have processed the data in such a way that the input language is staggered backwards by 1 token and the output is staggered forwards by 1 token. The model has 8 decoder and intermediate layers, with an embedding layer in the beginning to help the model process the data. Each transformer layer has 4 attention heads. The last layer is a dense layer utilizing the softmax function.  These values can be altered by simply altering the values in the hyperparameter code-block. 
+# Code Outputs
+Once the entire code file is run, it generates the following results in the home directory:
+I. A folder called plots that contains the plots for the train/validation accuracy, train/validation loss and the variation in the learning rate of the model per epochs.
+II. A folder called outputs that contains the resulting tokenizer file and the model weights file.
